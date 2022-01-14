@@ -121,6 +121,6 @@
     }
   }
 
-  render();
   init();
+  render();
 })();
