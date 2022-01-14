@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "pwa export",
-    "start": "sirv build -s",
+    "start": "pwa export && sirv build -s",
     "dev": "pwa watch",
     "format:js": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "lint:js": "eslint ./src --ext .js,.ts,.tsx --fix",
@@ -16,7 +16,8 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-swipeable": "^6.2.0",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "sirv-cli": "^2.0.1"
   },
   "devDependencies": {
     "@pwa/cli": "latest",
