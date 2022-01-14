@@ -56,3 +56,7 @@ figcaption {
   top: 0;
   left: 0;
 }
+
+.animate {
+  transition: left 120ms ease-out, top 120ms ease-out;
+}
