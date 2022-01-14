@@ -1,0 +1,47 @@
+.header {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.indexCircle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  
+  &.one {
+    background: linear-gradient(40deg, #{$color0} 0%, #{$color1} 100%);
+  }
+  &.two {
+    background: linear-gradient(40deg, #{$color1} 0%, #{$color2} 100%);
+  }
+  &.three {
+    background: linear-gradient(40deg, #{$color2} 0%, #{$color3} 100%);
+  }
+}
+
+.indexLabel {
+  line-height: 1;
+  color: #fff;
+}
+
+.title {
+  font-weight: $weight-bold;
+  font-size: 4rem;
+  letter-spacing: -0.01em;
+  margin-top: 14px;
+}
+
+.subtitle {
+  color: #b0b0b0;
+  font-size: 1.8rem;
+  margin-top: 4px;
+}

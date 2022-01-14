@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "max-empty-lines": 1,
+    "order/properties-alphabetical-order": true
+  }
+}

@@ -1,8 +1,9 @@
+@import '~/styles/vars.scss';
 
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 	&:after, &:before {
 		box-sizing: border-box;
 	}
@@ -10,12 +11,12 @@
 
 body {
 	color: #333;
-	position: relative;
-	font-family: var(--font-list);
+	font-family: $font-primary;
 	-webkit-font-smoothing: antialiased;
+	position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', serif;
+	font-family: $font-primary;
 	font-weight: 700;
 }
