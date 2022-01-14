@@ -1,5 +1,16 @@
 (() => {
   const tiles = document.querySelectorAll('li.tile');
+  const possibleMoves = {
+    0: [1, 3],
+    1: [0, 2, 4],
+    2: [1, 5],
+    3: [0, 4],
+    4: [1, 3, 5, 7],
+    5: [2, 4, 8],
+    6: [3, 7],
+    7: [4, 6, 8],
+    8: [5, 7]
+  };
 
   let state = [
     [0, 1, 2],
@@ -18,23 +29,53 @@
   }
 
   const getStyleForPosition = position => {
-    const row = position % 3;
-    const col = Math.floor(position / 3);
+    const col = position % 3;
+    const row = Math.floor(position / 3);
 
-    return `left: ${row * 100}px; top: ${col * 100}px;`;
+    return `left: ${col * 100}px; top: ${row * 100}px;`;
   }
 
-  const handleClick = index => (event) => {
-    const style = getStyleForPosition(getPosition(index));
+  const moveTile = (from, to) => {
+    const fromCol = from % 3;
+    const fromRow = Math.floor(from / 3);
+    const toCol = to % 3;
+    const toRow = Math.floor(to / 3);
 
-    console.log('style', style);
+    const tempState = [
+      [...state[0]],
+      [...state[1]],
+      [...state[2]],
+    ];
+    const prevTile = tempState[fromRow][fromCol];
+    tempState[fromRow][fromCol] = null;
+    tempState[toRow][toCol] = prevTile;
+
+    state = tempState;
   }
 
-  for (let i = 0; i < tiles.length; i++) {
-    const tile = tiles[i];
+  const handleClick = number => () => {
+    const position = getPosition(number);
+    const moves = possibleMoves[position];
+    const emptyPosition = getPosition(null);
 
-    tile.addEventListener('click', handleClick(i));
-    tile.style.cssText = getStyleForPosition(getPosition(i));
+    if (moves.includes(emptyPosition)) {
+      moveTile(position, emptyPosition);
+      render();
+    }
+    else {
+      // Sorry can't move
+    }
   }
+
+  const render = (init = false) => {
+    for (let i = 0; i < tiles.length; i++) {
+      const tile = tiles[i];
+
+      if (init) tile.addEventListener('click', handleClick(i));
+
+      tile.style.cssText = getStyleForPosition(getPosition(i));
+    }
+  }
+
+  render(true);
 })();
-

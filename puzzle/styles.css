@@ -51,6 +51,7 @@ figcaption {
   line-height: 86px;
   cursor: pointer;
   pointer-events: all;
+  user-select: none;
   position: absolute;
   top: 0;
   left: 0;
