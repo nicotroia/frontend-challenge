@@ -12,11 +12,12 @@
 body {
 	color: #333;
 	font-family: $font-primary;
+	font-weight: $weight-regular;
 	-webkit-font-smoothing: antialiased;
 	position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-primary;
-	font-weight: 700;
+	font-weight: $weight-bold;
 }

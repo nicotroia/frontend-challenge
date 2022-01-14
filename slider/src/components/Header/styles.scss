@@ -20,6 +20,8 @@
 .indexLabel {
   color: #fff;
   line-height: 1;
+  font-weight: $weight-bold;
+  font-size: 1.2rem;
 }
 
 .indexCircle {
@@ -51,6 +53,7 @@
 .subtitle {
   color: #b0b0b0;
   font-size: 1.8rem;
+  font-weight: $weight-regular;
   margin-top: 4px;
 }
 
