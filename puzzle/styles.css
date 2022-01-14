@@ -3,6 +3,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
 }
 
@@ -24,13 +26,13 @@ figcaption {
   height: 320px;
   padding: 10px;
   border-radius: 7px;
+  margin: 30px;
 }
 
 .puzzle {
-  display: flex;
-  flex-wrap: wrap;
   width: 300px;
   height: 300px;
+  position: relative;
 }
 
 .tile {
@@ -42,10 +44,14 @@ figcaption {
   border-left: 6px solid #ccc;
   border-right: 6px solid #666;
   border-bottom: 6px solid #666;
-  flex: 1 1 100px;
   text-align: center;
   vertical-align: middle;
   color: #333;
   font-size: 28px;
   line-height: 86px;
+  cursor: pointer;
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
