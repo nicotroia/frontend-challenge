@@ -10,7 +10,7 @@ import styles from './styles.scss';
 const App = (): JSX.Element => {
   const [index, setIndex] = useState(0);
 
-  const handleSwipeLeft = () => setIndex(Math.min(3, index + 1));
+  const handleSwipeLeft = () => setIndex(Math.min(2, index + 1));
   const handleSwipeRight = () => setIndex(Math.max(0, index - 1));
 
   const handlers = useSwipeable({

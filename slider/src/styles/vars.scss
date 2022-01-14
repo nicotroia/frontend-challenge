@@ -10,6 +10,13 @@ $weight-regular: 400;
 $weight-semibold: 700;
 $weight-bold: 900;
 
+$ease-circ: cubic-bezier(0.11, 0.77, 0.28, 0.92);
+
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+
 :export {
   color0: $color0;
   color1: $color1;

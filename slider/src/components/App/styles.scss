@@ -7,29 +7,30 @@
 }
 
 .touchable {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
   pointer-events: all;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 .top {
   background: #fff;
   height: 50vh;
-  width: 100%;
-  user-select: none;
   pointer-events: none;
+  user-select: none;
+  width: 100%;
 }
 
 .bottom {
-  background: $color0;
-  background: linear-gradient(90deg, $color0 0%, $color1 33%, $color2 66%, $color3 100%);
+  align-items: center;
+  display: flex;
   height: 50vh;
-  width: 100%;
-  user-select: none;
+  justify-content: center;
   pointer-events: none;
+  user-select: none;
+  width: 100%;
 }
